@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo apt install jq
+pip install shell-gpt
+cd .local/bin
+python sgpt
+python sgpt "Hello"
+export PATH=$PATH:~/.local/bin:/usr/bin/python3
+sgpt
+nano ~/.bashrc
+source ~/.bashrc
+sgpt --shell "Scan the target 10.0.2.17"
